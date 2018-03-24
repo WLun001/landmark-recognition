@@ -19,6 +19,7 @@ def fetch_image(path, dir_path):
     del response
 links=data['url']
 landmark_id=data['landmark_id']
+id=data['id']
 i=0
 
 for link in links:              #looping over links to get images
@@ -29,8 +30,8 @@ for link in links:              #looping over links to get images
     if not os.path.exists(dir_path): 
     	os.makedirs(dir_path)
     fetch_image(link, dir_path)
-    os.rename(dir_path + '/image.jpg', dir_path + '/' + str(landmark_id[i]) + '_' +str(i)+ '.jpg')
+    os.rename(dir_path + '/image.jpg', dir_path + '/' +  str(id[i]) + '_' + str(landmark_id[i]) + '_' +str(i)+ '.jpg')
     print('Downloading ' + str(i) +  '/' + str(len(links)))
     i+=1
-    if(i==5000):   #uncomment to test in your machine
+    if(i==15):   #uncomment to test in your machine
         break

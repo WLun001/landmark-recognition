@@ -21,5 +21,6 @@ Deep learning from scratch can take days, but transfer learning can be done in s
 - run.py to run the prediction
 
 ## Full datasets
-train: 336 GB with 1,220,165 images 
-test: 34.9 GB with 116,163 images
+- train: 336 GB with 1,220,165 images 
+- test: 34.9 GB with 116,163 images
+- May want to consider run on Cloud

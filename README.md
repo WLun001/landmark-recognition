@@ -18,7 +18,7 @@ Deep learning from scratch can take days, but transfer learning can be done in s
 - easy_downloader_training.py for download images for training data
 - easy_downloader_testing.py for download images for testing data
 - label.image.py for image labelling and prediction
-- run.py to run the prediction
+- run.ipynb to run the prediction
 
 ## Full datasets
 - train: 336 GB with 1,220,165 images 

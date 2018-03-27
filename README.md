@@ -16,7 +16,7 @@ Deep learning from scratch can take days, but transfer learning can be done in s
 
 ## File Explanation
 - [image_downloader](image_downloader) image downloader for both testing and training data, with compression option
-- [datasets analysis](data_analysis) data analysis and visualisation
+- [datasets analysis](datasets_analysis) data analysis and visualisation
 - [label_image.py](label_image.py) for image labelling and prediction
 - [run.ipynb](run.ipynb) to run the prediction
 

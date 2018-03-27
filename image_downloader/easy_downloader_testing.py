@@ -31,5 +31,5 @@ for link in links:              #looping over links to get images
     os.rename(dir_path + '/image.jpg', dir_path + '/' +  str(id[i]) + '.jpg')
     print('Downloading ' + str(i) +  '/' + str(len(links)))
     i+=1
-    if(i==15):   #uncomment to test in your machine
+    if(i==500):   #uncomment to test in your machine
         break

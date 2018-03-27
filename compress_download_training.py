@@ -19,13 +19,13 @@ from io import BytesIO
 def parse_data(data_file):
     csvfile = open(data_file, 'r')
     csvreader = csv.reader(csvfile)
-    key_url_list = [line[:] for line in csvreader]
-    return key_url_list[1:]  # Chop off header
+    data_list = [line[:] for line in csvreader]
+    return data_list[1:]  # Chop off header
 
 
-def download_image(key_url):
+def download_image(data_list):
     out_dir = sys.argv[2]
-    (key, url, landmark) = key_url
+    (key, url, landmark) = data_list
     dir_path = out_dir + str(landmark)
     if not os.path.exists(dir_path): 
     	os.makedirs(dir_path)
@@ -55,7 +55,7 @@ def download_image(key_url):
         return
 
     try:
-        pil_image_rgb.save(filename, format='JPEG', quality=90)
+        pil_image_rgb.save(filename, format='JPEG', quality=2)
     except:
         print('Warning: Failed to save image {}'.format(filename))
         return
@@ -70,9 +70,9 @@ def loader():
     if not os.path.exists(out_dir):
         os.mkdir(out_dir)
 
-    key_url_list = parse_data(data_file)
+    data_list = parse_data(data_file)
     pool = multiprocessing.Pool(processes=4)  # Num of CPUs
-    pool.map(download_image, key_url_list)
+    pool.map(download_image, data_list)
     pool.close()
     pool.terminate()
 

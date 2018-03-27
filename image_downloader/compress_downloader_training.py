@@ -25,7 +25,7 @@ def parse_data(data_file):
 
 def download_image(data_list):
     out_dir = sys.argv[2]
-    (key, url, landmark) = data_list
+    (key, url) = data_list
     dir_path = out_dir + str(landmark)
     if not os.path.exists(dir_path): 
     	os.makedirs(dir_path)

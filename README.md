@@ -10,8 +10,9 @@ Deep learning from scratch can take days, but transfer learning can be done in s
 
 ## Get Started
 - Follow tutorial from [codelabs](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets)
-- After done the tutorial, replace the label.image.py from this respo to the cloned respo
-- copy the run.py to cloned respo and run
+- Clone the respo from [tensorflow](https://github.com/googlecodelabs/tensorflow-for-poets-2)
+- After done the tutorial, replace the [label_image.py](label_image.py) from this respo to the cloned respo
+- copy the [run.ipynb](run.ipynb) to cloned respo and run
 
 
 ## File Explanation
